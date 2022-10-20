@@ -1,11 +1,12 @@
-import './App.css';
+import Map from "./components/Map/Map";
 
-function App() {
+const App = () => {
   return (
     <div >
-      asadsa
-
-      asdsad
+      <h1>Berlin Diachron - eras of a city</h1>
+      <div className="mapContainer" >
+        <Map/>
+      </div>
     </div>
   );
 }
