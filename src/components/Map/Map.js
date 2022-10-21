@@ -3,6 +3,7 @@ import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 import 'leaflet-defaulticon-compatibility';
 import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet'
 import styles from './Map.module.scss'
+import LocateControl from './LocateControl/LocateControl';
 
 const Map = () => {
   return (
@@ -11,11 +12,7 @@ const Map = () => {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Marker position={[52.51546549130771, 13.404150914931147]}>
-        <Popup>
-          My office - a public library <br />cannot get cheaper than that!
-        </Popup>
-      </Marker>
+      <LocateControl/>
     </MapContainer>
   )
 }
