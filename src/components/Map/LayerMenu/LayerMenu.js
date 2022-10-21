@@ -12,19 +12,34 @@ const LayerMenu = () => {
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
         </LayersControl.BaseLayer>
+        <LayersControl.BaseLayer name="1656">
+            <TileLayer
+              url="https://warper.wmflabs.org/maps/tile/491/{z}/{x}/{y}.png"
+              attribution={'<a target="_blank" href="https://warper.wmflabs.org/maps/491">WikiMaps Warper, Dahlberg Berlin 1688 1656-57</a>'}
+            />
+        </LayersControl.BaseLayer>
         <LayersControl.BaseLayer name="1750">
             <TileLayer
               url="http://warper.wmflabs.org/maps/tile/188/{z}/{x}/{y}.png"
+              attribution={'<a target="_blank" href="https://warper.wmflabs.org/maps/188">WikiMaps Warper, Schmettau Plan de la Ville de Berlin 1750</a>'}
             />
         </LayersControl.BaseLayer>
         <LayersControl.BaseLayer name="1804">
             <TileLayer
               url="http://warper.wmflabs.org/maps/tile/468/{z}/{x}/{y}.png"
+              attribution={'<a target="_blank" href="https://warper.wmflabs.org/maps/468">WikiMaps Warper, Selter Grundriss von Berlin 1804</a>'}
             />
         </LayersControl.BaseLayer>
         <LayersControl.BaseLayer name="1863">
             <TileLayer
               url="http://warper.wmflabs.org/maps/tile/287/{z}/{x}/{y}.png"
+              attribution={'<a target="_blank" href="https://warper.wmflabs.org/maps/287">WikiMaps Warper, Neuester Bebauungs-Plan von Berlin 1863</a>'}
+            />
+        </LayersControl.BaseLayer>
+        <LayersControl.BaseLayer name="1910">
+            <TileLayer
+              url="https://warper.wmflabs.org/maps/tile/1220/{z}/{x}/{y}.png"
+              attribution={'<a target="_blank" href="https://warper.wmflabs.org/maps/1220">WikiMaps Warper, Straube-Plan Berlin 1910</a>'}
             />
         </LayersControl.BaseLayer>
         <LayersControl.BaseLayer name="1928">
