@@ -1,6 +1,7 @@
 import { useEffect } from "react";
-import { useLeaflet, useMap } from "react-leaflet";
+import { useMap } from "react-leaflet";
 import Locate from "leaflet.locatecontrol";
+import './LocateControl.css'
 
 export default function LocateControl() {
 
@@ -23,7 +24,6 @@ export default function LocateControl() {
     }
 
     const lc = new Locate(locateOptions);
-    // console.log(lc);
     lc.addTo(map);
 
     return () => {
