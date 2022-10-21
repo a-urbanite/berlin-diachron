@@ -4,10 +4,24 @@ import 'leaflet-defaulticon-compatibility';
 import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet'
 import styles from './Map.module.scss'
 import LocateControl from './LocateControl/LocateControl';
+import 'leaflet.fullscreen/Control.FullScreen.js'
+import 'leaflet.fullscreen/Control.FullScreen.css'
 
 const Map = () => {
   return (
-    <MapContainer center={[52.5200, 13.4050]} zoom={13} scrollWheelZoom={false} className={styles.mapContainer}>
+    <MapContainer 
+      center={[52.5200, 13.4050]} 
+      zoom={13} 
+      scrollWheelZoom={false} 
+      className={styles.mapContainer}
+      fullscreenControl={true}
+      fullscreenControlOptions={
+        { 
+          forceSeparateButton: true,
+          position: 'bottomleft'
+        }
+      }
+    >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
