@@ -1,0 +1,17 @@
+                  //map overlay
+          var overlay1 = L.tileLayer('http://warper.wmflabs.org/maps/tile/188/{z}/{x}/{y}.png');
+          var overlay2 = L.tileLayer('http://warper.wmflabs.org/maps/tile/468/{z}/{x}/{y}.png');
+          var overlay3 = L.tileLayer('http://warper.wmflabs.org/maps/tile/287/{z}/{x}/{y}.png');
+          /*
+          var overlay4 = L.tileLayer.wms('https://fbinter.stadt-berlin.de/fb/wms/senstadt/k_luftbild1928', {
+              layers: '1', crs: 'EPSG:3857'});
+          var overlay5 = L.tileLayer.wms('http://ows.mundialis.de/services/service?', {
+              layers: 'TOPO-OSM-WMS'});
+          */
+          var overlayMaps = {
+            "1750": overlay1,
+            "1804": overlay2,
+            "1863": overlay3,
+          };
+
+          L.control.layers(null, overlayMaps,{position: 'bottomleft', collapsed:false}).addTo(map);
