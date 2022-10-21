@@ -7,15 +7,16 @@ import LocateControl from './LocateControl/LocateControl';
 import L from 'leaflet'
 import 'leaflet.fullscreen/Control.FullScreen.js'
 import 'leaflet.fullscreen/Control.FullScreen.css'
+import { useState } from 'react'
 
 const Map = () => {
+  const [crs, setcrs] = useState('default')
+
   return (
     
     <MapContainer 
     center={[52.5200, 13.4050]} 
     zoom={13} 
-        // default crs L.CRS.EPSG3857
-      // crs={L.CRS.EPSG4326}
       scrollWheelZoom={false} 
       className={styles.mapContainer}
       fullscreenControl={true}
@@ -52,12 +53,22 @@ const Map = () => {
               url="https://fbinter.stadt-berlin.de/fb/wms/senstadt/k_luftbild1928?"
               params={{layers: '0'}}
               attribution={'<a target="_blank" href="https://fbinter.stadt-berlin.de/fb/index.jsp?Szenario=luftbild&loginkey=zoomStart&mapId=k_luftbild1928@senstadt">Geoportal Berlin, Luftbilder 1928</a>'}
+              crs={L.CRS.EPSG4326}
+              // eventHandlers={{
+              //   add: (e) => {
+              //     console.log("Added Layer:", e.target);
+              //   },
+              //   remove: (e) => {
+              //     console.log("Removed layer:", e.target);
+              //   }
+              // }}
             />
         </LayersControl.Overlay>
         <LayersControl.Overlay name="1953">
             <WMSTileLayer
               url="https://fbinter.stadt-berlin.de/fb/wms/senstadt/k_luftbild1953"
               params={{layers: '0'}}
+              crs={L.CRS.EPSG4326}
               attribution={'<a target="_blank" href="https://fbinter.stadt-berlin.de/fb/index.jsp?Szenario=luftbild&loginkey=zoomStart&mapId=k_luftbild1953@senstadt">Geoportal Berlin, Luftbilder 1953</a>'}
             />
         </LayersControl.Overlay>
