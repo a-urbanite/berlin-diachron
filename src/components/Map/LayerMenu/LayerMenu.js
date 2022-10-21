@@ -1,10 +1,17 @@
 import React from 'react'
-import { TileLayer, LayersControl, WMSTileLayer } from 'react-leaflet'
-import L from 'leaflet'
+import { TileLayer, LayersControl, WMSTileLayer, Marker, Popup } from 'react-leaflet'
+import L, { GridLayer } from 'leaflet'
+import ReactLeafletGoogleLayer from 'react-leaflet-google-layer';
 
 const LayerMenu = () => {
   return (
     <LayersControl position="topright">
+        <LayersControl.BaseLayer checked name="default">
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+        </LayersControl.BaseLayer>
         <LayersControl.BaseLayer name="1750">
             <TileLayer
               url="http://warper.wmflabs.org/maps/tile/188/{z}/{x}/{y}.png"
@@ -50,6 +57,9 @@ const LayerMenu = () => {
               params={{layers: 'bb_DOP50g_1992_1997'}}
               attribution={'<a target="_blank" href="https://geobroker.geobasis-bb.de/gbss.php?MODE=GetProductPreview&PRODUCTID=06f356f2-d61f-4bdf-9c5b-1741b273b327">© GeoBasis-DE/LGB, dl-de/by-2-0</a>'}
             />
+        </LayersControl.BaseLayer>
+        <LayersControl.BaseLayer name="2022">
+          <ReactLeafletGoogleLayer apiKey='AIzaSyDNJlAGTVdPIpNg8ldFV3FipVnZ1LzAX78' type={'hybrid'} />
         </LayersControl.BaseLayer>
       </LayersControl>
   )
