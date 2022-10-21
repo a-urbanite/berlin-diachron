@@ -59,7 +59,7 @@ const LayerMenu = () => {
             />
         </LayersControl.BaseLayer>
         <LayersControl.BaseLayer name="2022">
-          <ReactLeafletGoogleLayer apiKey='AIzaSyDNJlAGTVdPIpNg8ldFV3FipVnZ1LzAX78' type={'hybrid'} />
+          <ReactLeafletGoogleLayer apiKey={process.env.REACT_APP_GOOGLE_MAPS_API} type={'hybrid'} />
         </LayersControl.BaseLayer>
       </LayersControl>
   )
