@@ -18,3 +18,9 @@ body {
 h1, h2 {
   text-align: center;
 }
+
+.leaflet-bottom.leaflet-right .leaflet-control-layers:nth-child(1) .leaflet-control-layers-toggle {
+  /* background-image: set you value */
+  /* background-color: rgb(35, 8, 61); */
+  background: no-repeat center/70% url('../public/opacity_icon.png');
+}
