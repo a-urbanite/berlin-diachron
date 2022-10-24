@@ -1,6 +1,6 @@
 import React from 'react'
 import { TileLayer, LayersControl, WMSTileLayer, Marker, Popup } from 'react-leaflet'
-import L, { GridLayer } from 'leaflet'
+import L from 'leaflet'
 import ReactLeafletGoogleLayer from 'react-leaflet-google-layer';
 
 const LayerMenu = () => {
@@ -66,7 +66,7 @@ const LayerMenu = () => {
               attribution={'<a target="_blank" href="https://fbinter.stadt-berlin.de/fb/index.jsp?Szenario=luftbild&loginkey=zoomStart&mapId=k_luftbild1953@senstadt">Geoportal Berlin, Luftbilder 1953</a>'}
             />
         </LayersControl.BaseLayer>
-        <LayersControl.BaseLayer name="1992-97">
+        <LayersControl.BaseLayer name="1992">
             <WMSTileLayer
               url="https://isk.geobasis-bb.de/ows/dop50g_1992_1997_wms?"
               params={{layers: 'bb_DOP50g_1992_1997'}}

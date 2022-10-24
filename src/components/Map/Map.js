@@ -7,6 +7,7 @@ import LocateControl from './LocateControl/LocateControl';
 import 'leaflet.fullscreen/Control.FullScreen.js'
 import 'leaflet.fullscreen/Control.FullScreen.css'
 import LayerMenu from './LayerMenu/LayerMenu';
+import OpacityControls from './OpacityControl/OpacityControl';
 
 const Map = () => {
 
@@ -30,6 +31,7 @@ const Map = () => {
       />
       <LocateControl/>
       <LayerMenu/>
+      <OpacityControls/>
     </MapContainer>
   )
 }
