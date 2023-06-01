@@ -12,3 +12,5 @@ I love maps. When i procrastinate i am actually often just hanging on Google Map
 ## Tech stack
 
 it a simple react app that uses the leaflet.js library for the map parts. With react-leaflet.js it is easy to set up those maps in a react environment since it abstracts all leaflet entities like the actual map and a marker into react components. It provides also a couple of hooks to improve the DX. Leaflet actually has its own ecosystem of plugins of which i used some for the fullscreen mode, the geolocator and the opacity control
+
+![alt text](https://www.guru99.com/images/3/free-photo-hosting-7.webp)
